@@ -6,7 +6,7 @@ This bash script generates an XML file that can be used as a background slidesho
 The script is able to randomize the order of the images. 
 
 ### Installation:
-- Place the script in the folder .bin (if you dont have the folder, create it with mkdir .bin).
+- Place the script in the folder .bin (if you dont have the folder, create it with > mkdir .bin).
   The dot designates a hidden file so it will only show up in the file manager after typing ctrl-h.
 - Make the file executable if necessary (chmod +x .bin/lmm-slidez).
 - Create the folder .backgrounds with mkdir .backgrounds if it is not already there.
