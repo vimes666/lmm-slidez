@@ -3,7 +3,7 @@
 ## Slideshow generator for linux mint mate desktop background.
 
 This bash script generates an XML file that can be used as a background slideshow in the linux mint mate desktop. It __recursively__ collects the names of all image files that are present in the input folder. 
-The script is able to randomizes the order of the images. 
+The script is able to randomize the order of the images. 
 
 ### Installation:
 - Place the script in the folder .bin (if you dont have the folder, create it with mkdir .bin).
