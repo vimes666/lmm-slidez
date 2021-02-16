@@ -17,7 +17,7 @@ The script is able to randomize the order of the images. Also the duration per i
         -v                  Print version.
 
 ### Installation:
-- Place the script in the folder .bin (if you dont have the folder, create it with `mkdir .bin`).
+- Place the script in the folder .bin and if you dont have the folder, create it with `mkdir .bin`.
   The dot designates a hidden file so it will only show up in the file manager after typing ctrl-h.
 - Make the file executable if necessary `chmod +x .bin/lmm-slidez`.
 - Create the folder .backgrounds with `mkdir .backgrounds` if it is not already there.
@@ -32,9 +32,7 @@ The script is able to randomize the order of the images. Also the duration per i
 - Navigate to /home/username/.backgrounds or enter that name in the location field.
 - Select the file slideshow.xml and click open.
 - Done.
+- If you generate a new slideshow and replace the existing active slideshow, the switch will be instantaneous. If you make one with another name you will have to add it manually as described before.
 
 ### Notes:
-- If you add, remove or change images in the image folder, you will have to run lmm-slidez again to see the result in the slideshow.
-- The random image order is estabished at the moment lmm-slidez runs. To get a new random order, you will have to run lmm-slidez again.
-- Comments and suggestions are always appreciated :)
-
+- Comments, suggestions and bug reports are always appreciated :)
