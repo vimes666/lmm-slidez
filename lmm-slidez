@@ -1,7 +1,7 @@
 #!/bin/bash
 # Slideshow generator for Linux Mint Mate by vimes666
  
-version="${0##*/} - version 2.3"
+version="${0##*/} - version 2.4"
 input_folder="/usr/share/backgrounds"
 output_file="$HOME/.backgrounds/slideshow.xml"
 duration=300
@@ -78,7 +78,7 @@ if [ -w $output_file  ]; then
    echo "$output_file already exists, do you want to replace it? - y/n"
    read ANSWER
    case $ANSWER in
-      [yY]|yes|Yes|YES) echo "Overwriting $output_file" ;;
+      [yY]|yes|Yes|YES) echo "Replacing $output_file" ;;
       *) echo "${0##*/} stopped" && exit 1 ;;
    esac
 fi  
