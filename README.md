@@ -6,13 +6,13 @@ This bash script generates an XML file that can be used as a background slidesho
 The script is able to randomize the order of the images. 
 
 ### Installation:
-- Place the script in the folder .bin (if you dont have the folder, create it with > mkdir .bin).
+- Place the script in the folder .bin (if you dont have the folder, create it with `mkdir .bin`).
   The dot designates a hidden file so it will only show up in the file manager after typing ctrl-h.
-- Make the file executable if necessary (chmod +x .bin/lmm-slidez).
-- Create the folder .backgrounds with mkdir .backgrounds if it is not already there.
+- Make the file executable if necessary `chmod +x .bin/lmm-slidez`.
+- Create the folder .backgrounds with `mkdir .backgrounds` if it is not already there.
 
 ### Usage:
-- In a terminal type lmm-slidez -r
+- In a terminal type `lmm-slidez -r`
   This will generate the slideshow file /home/username/.backgrounds/slideshow.xml from all the images in the linux mint backgrounds folder /usr/share/backgrounds.
   The -r option tells the script to randomize the picture order.
 - Right-click the desktop background and click 'change desktop background'.
