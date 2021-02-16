@@ -6,7 +6,7 @@ This bash script generates an XML file that can be used as a background slidesho
 The script is able to randomize the order of the images. Also the duration per image, input folder and output file can be set.
 
 ### Syntax
-`lmm-slidez [-h] [-r] [-v] [-d duration] [-i input-folder] [-o output-file]
+lmm-slidez [-h] [-r] [-v] [-d duration] [-i input-folder] [-o output-file]
 
     -d seconds          How long each image will be displayed.
     -h                  Show syntax.
