@@ -34,7 +34,7 @@ The script is able to randomize the order of the images. Also the duration per i
 - Click 'Add...'.
 - Select 'All files' on the pull down button that says 'Images' (above the open button).
 - Navigate to /home/username/.backgrounds or enter that name in the location field.
-- Select the file slideshow.XML and click open.
+- Select the file slideshow.xml and click open.
 - Done.
 - If you generate a new slideshow and replace the existing active slideshow, the switch will be instantaneous. If you make one with another name you will have to add it manually as described before.
 
