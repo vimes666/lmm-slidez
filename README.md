@@ -8,7 +8,8 @@ The script is able to randomize the order of the images. Also the duration per i
 ### Syntax
     lmm-slidez [-h] [-r] [-v] [-d duration] [-i input-folder] [-o output-file]
 
-        -d seconds          How long each image will be displayed.
+        -d duration         The duration that each image is displayed in seconds.
+                            The default is 300.
         -h                  Show syntax.
         -i input-folder     Specifies the location name where the images are located. 
                             Default is /usr/share/backgrounds.
