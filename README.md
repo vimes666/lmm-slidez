@@ -28,7 +28,7 @@ The script is able to randomize the order of the images. Also the duration per i
 ### Usage:
 - In a terminal type `lmm-slidez -r`
   This will generate the slideshow file /home/username/.backgrounds/slideshow.XML from all the images in the Linux mint backgrounds folder /use/share/backgrounds.
-  The -r option tells the script to randomize the picture order.
+  The -r option tells the script to randomize the order of the images.
 - Right-click the desktop background and click 'change desktop background'.
 - Click 'Add...'.
 - Select 'All files' on the pull down button that says 'Images' (above the open button).
