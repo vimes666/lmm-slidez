@@ -1,12 +1,13 @@
 #!/bin/bash
 # Slideshow generator for Linux Mint Mate by vimes666
  
-version="${0##*/} - version 2.4"
+version="${0##*/} - version 2.5"
 input_folder="/usr/share/backgrounds"
 output_file="$HOME/.backgrounds/slideshow.xml"
 duration=300
+maxdepth=2147483647   # default maximum
 cnt=0
-usage="Usage: ${0##*/} [-h] [-r] [-v] [-d duration] [-i input-folder] [-o output-file]"
+usage="Usage: ${0##*/} [-f] [-h] [-r] [-v] [-d duration] [-i input-folder] [-m maxdepth] [-o output-file]"
 
 # Write the startdate section
 function write_heading {
@@ -45,11 +46,13 @@ function write_tail {
 }
 
 # check switches
-while getopts d:hi:o:rv opt; do
+while getopts d:fhi:m:o:rv opt; do
    case $opt in
       d)  duration=$OPTARG ;;
+      f)  overwrite=TRUE ;;
       h)  echo "$usage" && exit 0 ;;
       i)  input_folder=$OPTARG ;;
+      m)  maxdepth=$OPTARG ;;
       o)  output_file=$OPTARG ;;
       r)  randomize=TRUE ;;
       v)  echo $version && exit 0 ;;
@@ -74,19 +77,29 @@ if [ ! -d "$input_folder" ]; then
    exit 1
 fi
 
-if [ -w $output_file  ]; then                                                                                               
-   echo "$output_file already exists, do you want to replace it? - y/n"
-   read ANSWER
-   case $ANSWER in
-      [yY]|yes|Yes|YES) echo "Replacing $output_file" ;;
-      *) echo "${0##*/} stopped" && exit 1 ;;
-   esac
-fi  
+pictures=$(find $input_folder -maxdepth $maxdepth -iname "*.jp*g" -o -iname "*.png" -o -iname "*.gif")   # Get the filenames of the pictures
 
-pictures=$(find $input_folder -iname "*.jp*g" -o -iname "*.png" -o -iname "*.gif")   # Get the filenames of the pictures
+if [ -z "$pictures" ]; then
+   echo "No images found."
+   exit 1
+fi
+
 if [ $randomize ]; then
    pictures=$(echo "$pictures"|sort -R)
 fi
+
+if [ -w $output_file  ]; then    
+   if [ $overwrite ]; then
+      answer=$overwrite
+   else
+      echo -e "$output_file already exists, do you want to replace it? - Y/\e[4mN\e[0m"
+      read answer
+   fi
+   case $answer in
+      [yY]|yes|Yes|YES|TRUE) echo "Replacing $output_file" ;;
+      *) echo "${0##*/} stopped" && exit 1 ;;
+   esac
+fi  
 
 write_heading      # Make the XML file
 while read -r line; do     
