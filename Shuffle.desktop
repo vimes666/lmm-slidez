@@ -7,6 +7,6 @@ Icon[en_GB]=/usr/share/icons/Mint-X/actions/16/stock_mail-send-receive.png
 Name[en_GB]=Shuffle
 Exec=bash -c 'a=$(lmm-slidez -rfd 180 | tail -n1) && notify-send "Backgrounds reshuffled" "$a"'
 Comment[en_GB]=Reload and reorder background images
-Name=shuffle backgrounds
+Name=Shuffle backgrounds
 Comment=Reload and reorder background images
 GenericName[en_GB]=Reload and reorder background images
